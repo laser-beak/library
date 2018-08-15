@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="jt.library.model.entity">
+    <class name="Book" lazy="false" table="book">
+        <id name="id" unsaved-value="null">
+            <generator class="native"/>
+        </id>
+        <property name="title"/>
+        <list name="authors" table="book_author_rel" cascade="all">
+            <key column="book_id"/>
+            <list-index column="author_order"/>
+            <many-to-many class="Author" column="author_id"/>
+        </list>
+    </class>
+</hibernate-mapping>
