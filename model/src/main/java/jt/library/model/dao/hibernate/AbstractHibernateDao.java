@@ -1,7 +1,6 @@
 package jt.library.model.dao.hibernate;
 
 import jt.library.model.dao.Dao;
-import jt.library.model.entity.Author;
 import jt.library.model.entity.Persitent;
 import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
