@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AuthorsController extends MultiActionController {
     public ModelAndView list(HttpServletRequest request, HttpServletResponse response) {
-        return null;
+
+        ModelAndView modelAndView = new ModelAndView("author/list");
+        modelAndView.addObject("msg", "AuthorsController");
+
+        return modelAndView;
     }
 }

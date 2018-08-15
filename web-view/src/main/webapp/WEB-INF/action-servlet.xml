@@ -7,7 +7,7 @@
         <property name="mappings">
             <props>
                 <prop key="/authors/*.html">authorsController</prop>
-                <prop key="/welcome.html">welcomeController</prop>
+                <prop key="/pages/*.html">welcomeController</prop>
             </props>
         </property>
     </bean>
