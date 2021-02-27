@@ -6,6 +6,7 @@ package jt.library.model.entity;
  * @author ctapobep
  */
 public class Author implements Persitent {
+
     private Long id;
     private String firstName;
     private String lastName;
@@ -15,6 +16,12 @@ public class Author implements Persitent {
 
     public Author(Long id) {
         this.id = id;
+    }
+
+    public Author(Long id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Long getId() {

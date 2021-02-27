@@ -6,13 +6,16 @@
     <bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="/authors/*.html">authorsController</prop>
+                <prop key="/author/*.html">authorsController</prop>
                 <prop key="/pages/*.html">welcomeController</prop>
             </props>
         </property>
     </bean>
 
-    <bean id="authorsController" class="jt.library.webview.AuthorsController"/>
+    <bean id="authorsController" class="jt.library.webview.AuthorsController">
+        <constructor-arg ref="authorService"/>
+    </bean>
+
     <bean id="welcomeController" class="jt.library.webview.WelcomeController"/>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -10,6 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Starter {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("/jt/library/model/entity/applicationContext-dao.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext(
+                new String[]{"/jt/library/model/entity/applicationContext-dao.xml", "/jt/library/service/applicationContext-service.xml"});
     }
 }

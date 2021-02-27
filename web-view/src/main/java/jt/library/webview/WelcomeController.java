@@ -10,6 +10,15 @@ import javax.servlet.http.HttpServletResponse;
  * Created by anvarov on 15.08.2018.
  */
 public class WelcomeController extends AbstractController {
+
+    /**
+     * При открытии страницы Добро пожаловать!
+     *
+     * @param httpServletRequest
+     * @param httpServletResponse
+     * @return
+     * @throws Exception
+     */
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
 

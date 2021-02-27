@@ -12,6 +12,10 @@ import java.util.List;
  * @author ctapobep
  */
 public class TransactionalAuthorService implements AuthorService {
+
+    /**
+     * ДАО класс - Автор
+     */
     private Dao<Author> authorDao;
 
     public TransactionalAuthorService(Dao<Author> authorDao) {

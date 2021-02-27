@@ -17,6 +17,8 @@
         </tx:attributes>
     </tx:advice>
 
+    <bean id="authorDao" class="jt.library.model.dao.hibernate.AuthorHibernateDao"/>
+
     <bean id="authorService" class="jt.library.service.transactional.TransactionalAuthorService">
         <constructor-arg ref="authorDao"/>
     </bean>

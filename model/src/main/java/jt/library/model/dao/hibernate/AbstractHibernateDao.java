@@ -11,6 +11,7 @@ import org.hibernate.classic.Session;
  * @author ctapobep
  */
 public abstract class AbstractHibernateDao<T extends Persitent> implements Dao<T> {
+
     private SessionFactory sessionFactory;
 
     protected Session getSession() {
