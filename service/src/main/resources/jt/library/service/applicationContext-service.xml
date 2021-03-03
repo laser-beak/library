@@ -18,8 +18,13 @@
     </tx:advice>
 
     <bean id="authorDao" class="jt.library.model.dao.hibernate.AuthorHibernateDao"/>
+    <bean id="bookDao" class="jt.library.model.dao.hibernate.BookHibernateDao"/>
 
     <bean id="authorService" class="jt.library.service.transactional.TransactionalAuthorService">
         <constructor-arg ref="authorDao"/>
+    </bean>
+
+    <bean id="bookService" class="jt.library.service.transactional.TransactionalBookService">
+        <constructor-arg ref="bookDao"/>
     </bean>
 </beans>

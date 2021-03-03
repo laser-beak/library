@@ -7,13 +7,43 @@
         <property name="mappings">
             <props>
                 <prop key="/author/*.html">authorsController</prop>
-                <prop key="/pages/*.html">welcomeController</prop>
+                <prop key="/book/*.html">booksController</prop>
+                <prop key="/book/add/*.html">booksFormController</prop>
+                <prop key="/author/add/*.html">authorFormController</prop>
+                <prop key="/pages/*.html">registrationController</prop>
             </props>
         </property>
     </bean>
 
     <bean id="authorsController" class="jt.library.webview.AuthorsController">
         <constructor-arg ref="authorService"/>
+    </bean>
+
+    <bean id="booksController" class="jt.library.webview.BooksController">
+        <constructor-arg ref="bookService"/>
+    </bean>
+
+    <bean id="booksFormController" class="jt.library.webview.BooksFormController">
+        <constructor-arg ref="bookService"/>
+        <property name="formView" value="book/add/create"/>
+        <property name="successView" value="book/list"/>
+        <property name="commandClass" value="jt.library.model.entity.Book"/>
+        <property name="commandName" value="book"/>
+    </bean>
+
+    <bean id="authorFormController" class="jt.library.webview.AuthorFormController">
+        <constructor-arg ref="authorService"/>
+        <property name="formView" value="author/add/create"/>
+        <property name="successView" value="author/list"/>
+        <property name="commandClass" value="jt.library.model.entity.Author"/>
+        <property name="commandName" value="author"/>
+    </bean>
+
+    <bean id="registrationController" class="jt.library.webview.RegistrationController">
+        <property name="formView" value="registration"/>
+        <property name="successView" value="home"/>
+        <property name="commandClass" value="jt.library.model.dto.RegistrationDto"/>
+        <property name="commandName" value="dto"/>
     </bean>
 
     <bean id="welcomeController" class="jt.library.webview.WelcomeController"/>

@@ -17,8 +17,8 @@
         <th>Номер</th>
         <th>Имя</th>
         <th>Фамилия</th>
-        <th> </th>
-        <th> </th>
+        <th></th>
+        <th></th>
     </tr>
     <c:forEach var="author" items="${authors}">
         <tr>
@@ -32,9 +32,11 @@
 </table>
 
 
-<p><a href="/author/create.html">Добавить автора!</a></p>
+<p><a href="/author/add/create.html">Добавить автора!</a></p>
 </br>
 <p><a href="/pages/welcome.html">Добро пожаловать!</a></p>
+
+<p><a href="/book/list.html">Книги!</a></p>
 
 </body>
 </html>

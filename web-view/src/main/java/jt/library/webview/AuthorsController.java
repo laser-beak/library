@@ -27,11 +27,11 @@ public class AuthorsController extends MultiActionController {
 
     private AuthorService authorService;
 
+    private List<Author> authors;
+
     public AuthorsController(AuthorService authorService) {
         this.authorService = authorService;
     }
-
-    private List<Author> authors;
 
     /**
      * Вывод всех авторов
@@ -61,12 +61,12 @@ public class AuthorsController extends MultiActionController {
     }
 
     public ModelAndView create(HttpServletRequest request, HttpServletResponse response) {
-        ModelAndView modelAndView = new ModelAndView("author/create");
+        ModelAndView modelAndView = new ModelAndView("author/add/create");
         modelAndView.addObject("author", new Author());
         return modelAndView;
     }
 
-    @RequestMapping(value="/submit",method = RequestMethod.POST)
+    @RequestMapping(value = "/submit", method = RequestMethod.POST)
     public String submit(@ModelAttribute("author") Author author,
                          BindingResult result, ModelMap model) {
         if (result.hasErrors()) {

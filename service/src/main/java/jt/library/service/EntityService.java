@@ -1,7 +1,5 @@
 package jt.library.service;
 
-import jt.library.model.entity.Author;
-
 import java.util.List;
 
 /**
@@ -9,7 +7,7 @@ import java.util.List;
  *
  * @author ctapobep
  */
-public interface EntityService<T extends Author> {
+public interface EntityService<T> {
     void saveOrUpdate(T persistent);
 
     void delete(Long id);

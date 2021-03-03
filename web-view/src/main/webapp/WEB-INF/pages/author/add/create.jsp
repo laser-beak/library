@@ -8,11 +8,7 @@
 <body>
 <h3>Добро пожаловать, введите данные Автора</h3>
 <%--@elvariable id="author" type="jt.library.model.entity.Author"--%>
-
-<spring:url value="/create" var="userActionUrl" />
-
-<form:form method="POST"
-           action="${userActionUrl}" modelAttribute="author">
+<form:form method="POST" commandName="author">
     <table>
         <caption>Форма заполнения - данных по автору</caption>
         <tr>
